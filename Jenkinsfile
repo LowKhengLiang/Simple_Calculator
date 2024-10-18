@@ -33,6 +33,7 @@ pipeline {
           }
         }
       }
+    }
     stage('Deploy to GitHub Pages') {
         steps {
             withCredentials([usernamePassword(credentialsId: 'github-credentials', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
